@@ -1,0 +1,4 @@
+project_id = "ymwlymasveorwpaexyql"
+
+[functions.validate-access-code]
+verify_jwt = false
