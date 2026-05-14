@@ -33,9 +33,6 @@
       "expo-router",
       "expo-secure-store",
       "expo-video"
-    ],
-    "experiments": {
-      "baseUrl": "/KripHub"
-    }
+    ]
   }
 }

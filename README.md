@@ -95,7 +95,8 @@ This repo deploys the Expo web app to GitHub Pages on every push to `main`.
 
 Production structure:
 
-- GitHub Pages URL: `https://marquesedition.github.io/KripHub`
+- Custom domain: `https://kriphub.com`
+- `CNAME` file: `kriphub.com`
 - Build output: Expo web export to `dist/`
 - SPA fallback: `dist/404.html` copied from `dist/index.html`
 - Workflow: `.github/workflows/deploy-pages.yml`
