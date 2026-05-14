@@ -89,6 +89,40 @@ For NativeWind cache issues:
 npx expo start --clear
 ```
 
+## Deploy Web To GitHub Pages
+
+This repo deploys the Expo web app to GitHub Pages on every push to `main`.
+
+Production structure:
+
+- GitHub Pages URL: `https://marquesedition.github.io/KripHub`
+- Build output: Expo web export to `dist/`
+- SPA fallback: `dist/404.html` copied from `dist/index.html`
+- Workflow: `.github/workflows/deploy-pages.yml`
+
+Repository setup required in GitHub:
+
+1. In the repo settings, enable GitHub Pages with GitHub Actions as the source.
+2. Add these repository secrets:
+
+```text
+EXPO_PUBLIC_SUPABASE_URL
+EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+EXPO_PUBLIC_ENCRYPTED_MEDIA_BUCKET
+```
+
+3. If the repo needs auto-enablement for Pages, also add:
+
+```text
+PAGES_ADMIN_PAT
+```
+
+Local production export:
+
+```bash
+npm run web:export
+```
+
 ## First Delivery Contents
 
 - Expo Router app routes with protected auth/main/owner groups.

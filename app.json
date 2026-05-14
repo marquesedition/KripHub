@@ -26,12 +26,16 @@
     },
     "web": {
       "bundler": "metro",
+      "output": "single",
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router",
       "expo-secure-store",
       "expo-video"
-    ]
+    ],
+    "experiments": {
+      "baseUrl": "/KripHub"
+    }
   }
 }

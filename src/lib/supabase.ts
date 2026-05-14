@@ -6,7 +6,7 @@ import { AppState, Platform } from 'react-native';
 import type { Database } from '../types/database';
 
 const supabaseUrl =
-  process.env.EXPO_PUBLIC_SUPABASE_URL ??
+  process.env.EXPO_PUBLIC_SUPABASE_URL?.trim() ||
   'https://ymwlymasveorwpaexyql.supabase.co';
 const rawSupabasePublishableKey =
   process.env.EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? '';
@@ -30,7 +30,7 @@ if (!isSupabaseConfigured) {
 }
 
 export const encryptedMediaBucket =
-  process.env.EXPO_PUBLIC_ENCRYPTED_MEDIA_BUCKET ?? 'encrypted-media';
+  process.env.EXPO_PUBLIC_ENCRYPTED_MEDIA_BUCKET?.trim() || 'encrypted-media';
 
 export const supabase = createClient<Database>(
   supabaseUrl,
