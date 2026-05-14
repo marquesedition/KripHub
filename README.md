@@ -100,10 +100,10 @@ Production structure:
 - SPA fallback: `dist/404.html` copied from `dist/index.html`
 - Workflow: `.github/workflows/deploy-pages.yml`
 
-Repository setup required in GitHub:
+Repository setup in GitHub:
 
 1. In the repo settings, enable GitHub Pages with GitHub Actions as the source.
-2. Add these repository secrets:
+2. Optionally add these repository secrets to override the public build defaults:
 
 ```text
 EXPO_PUBLIC_SUPABASE_URL
